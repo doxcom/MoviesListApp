@@ -18,7 +18,7 @@ const MovieCard = ({movie}) => {
             <h3 className="movie_details_heading">{movie.original_title}</h3>
             <div className="align_center movie_data_rate">
                 <p>{movie.release_date}</p>
-                <p>{movie.rate_average} <img src={Star} alt="rating icon"
+                <p>{movie.vote_average} <img src={Star} alt="rating icon"
                 className="card_emoji"/></p>
             </div>
             <p className="movie_description"> 
