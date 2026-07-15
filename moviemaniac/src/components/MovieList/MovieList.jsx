@@ -17,12 +17,16 @@ const MovieList = ({type, title, emoji}) => {
 
   useEffect(() =>{
     fetchMovies();
-  },[]);
+  },[type]);
 
   useEffect(() =>{
       if(sort.by !=="default"){
-         const sortedMovies =_.orderBy(filterMovies, [sort.by], [sort.order])
-         setFilterMovies(sortedMovies)
+         const sortedMovies =_.orderBy(
+          filterMovies, 
+          [sort.by],
+          [sort.order]
+        );
+         setFilterMovies(sortedMovies);
       }
   },[sort])
 
